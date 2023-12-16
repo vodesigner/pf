@@ -1,29 +1,121 @@
-#header {  height: 7vw; width: 100%; padding: 0.2vw; 
-    display:  flex;  flex-flow: row wrap; gap: 12vw; justify-content: center; }
-.logo { display:  flex; width: 8vw;  flex-flow: row wrap;  align-items: center; 
+#navi {  height: 7vw; width: 100%; padding: 0.2vw; overflow: hidden;
+    display:  flex;  flex-flow: row wrap; gap: 12vw; justify-content: center; align-items: center;}
+.logo { display:  flex; width: 7vw;  flex-flow: row wrap;  align-items: center; 
     padding-left: 0.6vw;}
-.logo img{height: 5vw; margin: 1vw 0; opacity: 0.6;}
-#header ul.menu{ display:  flex; gap:2.2vw; 
+.logo img{height: 4.6vw; margin: 1vw 0; opacity: 0.6;}
+#navi ul.menu{ display:  flex; gap:0.9vw;  padding-right: 19vw;
     align-items: center; justify-content: center;}
 /* ul.menu::after{} */
-#header ul.menu li{ transition: all 0.3s; border-radius: 30px; color: #555;
+#navi ul.menu li{ transition: all 0.3s; border-radius: 30px; color: #555;
     padding: 10px 35px;  line-height: 2vw; font-size: 1.2vw; text-transform: uppercase;}
-#header ul.menu li:hover:not(:last-child){
+/* #navi ul.menu li:nth-child(2n-1){background-color: rgb(247, 65, 126);} */
+    #navi ul.menu li:hover:not(:last-child){
     background-color: #444; color: #f2f2f2; }
 /* #header ul.menu li:last-child:hover{ transform: rotateZ('90deg');} */
-#header ul{ flex-grow: 1;}
-.hamberger{ width: 48px; height: 48px;
+
+#navi ul{ flex-grow: 2;}
+
+#navi ul.menu li:last-child a i:hover{ transform: rotateX('180deg');}
+
+.hamberger{ width: 48px; height: 48px;  flex-grow: 0;
     display: flex; flex-flow: row wrap; justify-content: center; align-items: center; 
-    border: 1px solid #bbb; border-radius: 3px;margin-right: 1.4vw;
-transform: translateY(75%);
+    border: 1px solid #bbb; border-radius: 3px; 
+    /* margin-right: 1.4vw;transform: translateY(15%);  */
+ position: absolute; right: 1vw;
 }
 .hamberger img { opacity: .6;}
+/* .hamx{ position: absolute; display: none; z-index: 3; } */
+.hamx:active{ display: block;}
+
+/* 햄버거 버튼 메뉴 크게 열고 닫기  */
+.sitemap{ display: none; transition: 0.3s; overflow: hidden;}
+.sitemap.active{ display: block; transition: 0.3s; }
+
+.sitemap-in{ transition: 0.3s; z-index: 3; position: absolute;
+    box-sizing: border-box; border-top: 1px solid #cccccc55; 
+    width: 100vw ; top: 7vw; background-color: #fffffff5; padding: 1vw 0 4vw 0;
+display: flex; flex-flow:  row wrap; justify-content: center;  }
+.sitemap_item { width:  26vw; padding-top: 1vw;}
+
+.sitemap_item ul {
+    padding: 1vw;
+     /* display:  flex; flex-flow: row wrap;
+     justify-content: center; align-items: center; */
+    }
+.sitemap_item h2 { font-size: 1.6vw; font-weight: 100;  color: #555;}
+.sitemap_item ul li {  width: 22vw;}
+.sitemap_item ul li a{ height: 44px; outline: none;  
+    font-size: 1.2vw; font-weight: 100; 
+    line-height: 1.6vw; color: #777;
+}
+
+.sitemap_item ul li a:hover{  font-weight: 400;font-size: 1.3vw; color: #555; }
 
 
+.sitemap-in .sitemap_item:last-child ul { width:26vw; padding-top: 1vw;
+    display: flex; flex-flow: column wrap; justify-content: center;  gap: 0.4vw; }
+.sitemap-in .sitemap_item:nth-last-child(2) ul li a p{  color: #666; border-radius: 6px;  
+    background-color: #cccccc55;  width: 22vw; height: 48px; line-height: 48px; 
+    border-radius: 6px; text-align: center; margin-bottom: 5px; }
+.sitemap-in .sitemap_item:nth-last-child(2) ul li a p{ outline: none;  
+    /* padding: 7px 30px;   font-family: 'Oswald', sans-serif;   */
+     font-size: 1.2vw; font-weight: 400;  height: 48px;  line-height: 48px; text-align: center;}
+.sitemap-in .sitemap_item:nth-last-child(2) ul li a p:hover{ background-color: #666;  color: #f2f2f2;
+    font-size: 1.2vw;  font-weight: 100;}
 
+.sitemap-close-btn{ display: none;
+        width: 48px; height: 48px; opacity: .6;
+        display: flex; flex-flow: row wrap; justify-content: center; align-items: center; 
+        border: 1px solid #bbb; border-radius: 3px;  }
+    
+.sitemap-close-btn:hover{ border: 1px solid #bbb; opacity: 1;  }
+        
+.sitemap-close-btn img{ opacity: .6;}
+.right {margin-left: 76vw;}
+/* .sitemap-in .sitemap_item:last-child ul li a:hover{ color: #f2f2f2;} */
+/* 
+.sitemap .contact ul { width:26vw; padding-top: 1vw;}
+.sitemap .contact ul li {  width: 200px; height: 48px; background-color: #c05e5e; }
+.sitemap .contact ul li a{ outline: none; 
+    padding: 4px 30px;
+    width: 100%; height: 44px; border-radius: 6px; text-align: center;
+} */
 
-main{ background-color: #333; position: relative;
+main{ background-color: #333; position: relative; overflow: hidden;
     display: flex; flex-flow: row wrap; justify-content: center; align-items: center; gap:0.2%;}
+main video{ top:-30%; opacity: .2; filter: invert(1) ;filter: sepia(.2); position: absolute; ;  object-fit: cover;
+/*     
+        position:absolute;
+        left:100px;
+        width:100px;
+        height:50px;
+        margin-left:-50px;
+        
+         */
+        /* 애니메이션 이름 */
+        animation-name: back-mov;
+        animation-duration:13s;
+        animation-duration: leaner;
+        animation-iteration-count:323333;
+        animation-direction: alternate;
+        animation-fill-mode: forwards;
+      }
+      
+      /* 키프레임 이름 = 애니메이션 이름 */
+      @keyframes back-mov {
+        0% {
+          top:-24%;
+        }   
+        50% {
+            top: 0; filter: invert(0);filter: sepia(.8);
+        }
+        100% {
+            top:-24%;
+        }
+      }
+
+
+
 main>div{ width: 24.8%; height: 14.0625vw;  overflow: hidden;  }
 /* main>div:nth-child(2n){ } */
 .item{ position: relative; transition: all 0.2s; display:  flex; border: 1px solid #f2f2f244; border-radius: 6px; }
@@ -33,7 +125,7 @@ main>div{ width: 24.8%; height: 14.0625vw;  overflow: hidden;  }
 .item-in:hover{  opacity: 0;}
 /* .item-in h5,.item-in h2,.item-in h6{ color: #f2f2f2;} */
 
-.item-in h5{color: #bbb; font-size: 1.0vw; margin: 2px 0 26px 0;  text-transform: uppercase; }
+.item-in h5{color: #bbb; font-size: 1.0vw; margin: 0.9vw 0 1.15vw 0;  text-transform: uppercase; }
 .item-in h2{color: #eee; font-size: 1.9vw; margin: 16px 0 4px 0; font-family: 'Oswald', sans-serif; font-weight: 300;}
 .item-in h6{color: #999; font-size: 1.1vw; margin: 4px 0 8px 0;  padding-top: 0.3vw;font-weight:200;}
 
@@ -56,18 +148,27 @@ main>div{ width: 24.8%; height: 14.0625vw;  overflow: hidden;  }
 .item-inner h2{  font-size: 1.44vw; font-family: 'Oswald', sans-serif; font-weight: 300;}
 .item-inner h6{ font-size: 1.0vw; font-weight: 200;}
 .item-inner table { width: 23vw; margin-top: .6vw;}
-.item-inner table tr td:nth-child(1){ text-align:right;}
-.item-inner table tr td:nth-child(2){  text-align:left;}
-.item-inner table tr td:nth-child(3){ color:#aaa;}
+.item-inner table tr { width: 100%;}
+.item-inner table tr td:nth-child(1){ text-align:right; width: 20%;}
+.item-inner table tr td:nth-child(2){  text-align:left;  width: 68%; }
+.item-inner table tr td:nth-child(3){color : #46cde577; width: 12%;}
+.item-inner table tr td:nth-child(3):hover{font-weight: 600; color : #46cde5aa;}
 .item-inner table tr td:nth-child(4){ color:#aaa; font-size: 40px; text-align: right;}
 
 
 .footer{ display: flex; gap: 3vw; justify-content: center; align-items: center; width: 100%; height: 134px; background-color: #222;}
-.flogo img{ padding: 0 1vw;  opacity: .3; height: 4vw; filter: invert(.6);}
+.flogo img{ padding: 0.1vw;  opacity: .3; height: 4vw; filter: invert(.6);}
 
 .fside {color: #888; flex-grow: 1;}
 .fside p{ line-height: 1.6vw;}
-.fsns { padding-right: 2vw;  display: flex; gap: 1.4vw; justify-content: center; align-items: center; }
+.fcall-btn{display: none; width: 90vw; display: flex; flex-flow: column wrap;
+    gap: 3vw; justify-content: center; align-items: center; color: #777;}
+.fcall-btn p:not(:last-child){ width: 75vw; height:  48px;
+    display: flex; flex-flow: column wrap; justify-content: center;align-items: center;
+    background-color: #555; border-radius: 10px; color: #999;}
+    .fcall-btn p:not(:last-child):hover{ background-color: #f32e9799;color: #ddd; }
+
+.fsns { padding: 2vw;  display: flex; gap: 1.4vw; justify-content: center; align-items: center; }
 .fsns i{ opacity: .4;}
 .fsns i:hover{ opacity: .8;}
 
