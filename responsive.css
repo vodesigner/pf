@@ -13,7 +13,7 @@
 .sitemap_item { width: 44vw; padding-top: 4vw;}
 
 .sitemap_item h2 { font-size: 3.6vw; font-weight: 100;  color: #555;}
-.sitemap_item ul{  margin-top: 0.2vw;}
+/* .sitemap_item ul{  margin-top: 0.2vw;} */
 .sitemap_item ul li{padding-top: 1vw; height: 40px; width: 40vw; border-bottom: 1px solid #77777707;}
 .sitemap_item:nth-last-child(2) ul li{padding-top: 2vw; height: 40px; width: 40vw; border-bottom: 0px solid #77777747;}
 .sitemap_item ul li a{ font-size: 2.8vw; font-weight: 100; line-height: 5vw; color: #777;}
