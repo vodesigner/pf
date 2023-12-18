@@ -13,11 +13,11 @@
     background-color: #444; color: #f2f2f2; }
 /* #header ul.menu li:last-child:hover{ transform: rotateZ('90deg');} */
 
-#navi ul{ flex-grow: 2;}
+#navi ul{ flex-grow: 2;  overflow: hidden;}
 
 #navi ul.menu li:last-child a i:hover{ transform: rotateX('180deg');}
 
-.hamberger{ width: 48px; height: 48px;  flex-grow: 0;
+.hamberger{ width: 48px; height: 48px;  flex-grow: 0;  overflow: hidden;
     display: flex; flex-flow: row wrap; justify-content: center; align-items: center; 
     border: 1px solid #bbb; border-radius: 3px; 
     /* margin-right: 1.4vw;transform: translateY(15%);  */
