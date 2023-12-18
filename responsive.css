@@ -3,30 +3,32 @@
   .fcall-btn{display: none;}}  
 @media  (max-width: 1560px ) {
   #navi {  height: 7vw;}
-  
+  /* main{ padding-top: 7vw;} */
   main video{ width: 300%;}
   #navi ul.menu li{  font-size: 1.3vw;}
   #navi ul.menu{ padding-right: 10vw; }
   main>div{ width: 32.6vw; height: 18.3375vw;  overflow: hidden;  }
-.sitemap_item { width:  32vw; padding-top: 1vw;}.sitemap-in{ flex-flow: row wrap; top: 12vw; justify-content: center; 
-  background-color: #f2f2f2f5; gap:1.6vw;}
-.sitemap_item { width: 44vw; padding-top: 4vw;}
+  .sitemap-in { padding-left: 1vw;}
+.sitemap_item { width:  30vw; padding-top: 1vw;}.sitemap-in{ flex-flow: row wrap; 
+  top: 7vw; justify-content: center; 
+  background-color: #f2f2f2f5; gap:1.4vw;}
+.sitemap_item { width: 30vw; padding-top: 4vw;}
 
-.sitemap_item h2 { font-size: 3.6vw; font-weight: 100;  color: #555;}
+.sitemap_item h2 { font-size: 1.8vw; font-weight: 100;  color: #555;}
 /* .sitemap_item ul{  margin-top: 0.2vw;} */
-.sitemap_item ul li{padding-top: 1vw; height: 40px; width: 40vw; border-bottom: 1px solid #77777707;}
-.sitemap_item:nth-last-child(2) ul li{padding-top: 2vw; height: 40px; width: 40vw; border-bottom: 0px solid #77777747;}
-.sitemap_item ul li a{ font-size: 2.8vw; font-weight: 100; line-height: 5vw; color: #777;}
-.sitemap_item ul li a:hover{  font-weight: 400;font-size: 2.9vw; color: #555; }
+.sitemap_item ul li{padding-top: 1vw; height: 40px; width: 30vw; border-bottom: 1px solid #77777707;}
+.sitemap_item:nth-last-child(2) ul li{padding-top: 2vw; height: 40px; width: 30vw; border-bottom: 0px solid #77777747;}
+.sitemap_item ul li a{ font-size: 1.3vw; font-weight: 100; line-height: 3vw; color: #777;}
+.sitemap_item ul li a:hover{  font-weight: 400;font-size: 1.4vw; color: #555; }
 
-.sitemap-in .sitemap_item:nth-last-child(2) ul { width:40vw; padding-top: 2vw;
+.sitemap-in .sitemap_item:nth-last-child(2) ul { width:30vw; padding-top: 2vw;
  display: flex; flex-flow: column wrap; justify-content: center;  gap: 2vw; }
 .sitemap-in .sitemap_item:nth-last-child(2) ul li a p{ 
-  color: #666; border-radius: 6px;  background-color: #cccccc55;  width: 40vw;
+  color: #666; border-radius: 6px;  background-color: #cccccc55;  width: 24vw;
  border-radius: 6px; text-align: center;outline: none;  
- font-size: 2vw; font-weight: 400;  height: 48px;  line-height: 48px; text-align: center;}
+ font-size: 1.3vw; font-weight: 400;  height: 48px;  line-height: 48px; text-align: center;}
 .sitemap-in .sitemap_item:nth-last-child(2) ul li a p:hover{ background-color: #666;  color: #f2f2f2;
- font-size: 2.1vw;  font-weight: 600;}
+ font-size: 1.4vw;  font-weight: 600;}
 
  .sitemap-close-btn{ display: none;}
       
