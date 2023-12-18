@@ -3,7 +3,7 @@
   .fcall-btn{display: none;}}  
 @media  (max-width: 1560px ) {
   #navi {  height: 7vw;}
-  main{ padding-top: 7vw;}
+  /* main{ padding-top: 7vw;} */
   main video{ width: 300%;}
   #navi ul.menu li{  font-size: 1.3vw;}
   #navi ul.menu{ padding-right: 10vw; }
