@@ -4,7 +4,7 @@
     height: 1300vw;
 padding-top: 4vw; outline: none;}
 
-.webs-window{  display: flex; flex-flow: row wrap; gap:4vw; 
+.webs-window{  display: flex; flex-flow: row nowrap; gap:4vw; 
     justify-content: center;  overflow: hidden; 
     width: 1000px; height: 720px;   }
 #webs-main>hr{box-sizing: border-box; height: 1px; width: 80%;

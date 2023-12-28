@@ -19,10 +19,10 @@ closeXBtn.addEventListener('click', () => {
 });
 
 // 스냅샷 a 잠가두기  !!! 꼭 해야함 >> 나중에 페이지 마련되면 다시 ON
-const snapAlla = document.querySelector('.toons-snapshots a');
+ //   const snapAlla = document.querySelector('.toons-snapshots a');
 
 
-snapAlla.removeClass('active');
+  //  snapAlla.removeClass('active');
 
 
 
