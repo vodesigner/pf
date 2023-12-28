@@ -1,0 +1,61 @@
+body{ box-sizing: border-box; font-size: 1.1vw;}
+main{ background-color: #f2f2f2; overflow: hidden;}
+#toons-main{border-top: 2px solid #999999aa; 
+    display: flex; flex-flow: column nowrap; align-items: center; gap:3vw;
+     }
+main .toons-main-banner{width:  100vw; height: 25vw ; overflow: hidden; }
+main .toons-main-banner img{width:  100%; margin-top: -7vw;}
+
+.spec{  display: flex; flex-flow: row wrap;  gap:1vw; width: 60vw; 
+    height: 52vw; padding: 1.4vw 0;}
+.spec-image{width: 29vw; height: 42vw; overflow: hidden;}
+.spec-image img{height: 110%; margin-left: -4vw;}
+.spec-txt .character-color{ display: flex; justify-content:  start; align-items: center; gap : 1vw; padding-bottom: 1vw;}
+.spec-txt .character-color span{ border-radius: 50%; width: 3vw; height: 3vw; border: 5px solid #ccc;}
+.spec-txt .character-color span:nth-child(1){ background-color: #bc000b; }
+.spec-txt .character-color span:nth-child(2){ background-color: #00aecd; }
+.spec-txt .character-color span:nth-child(3){ background-color: #43b993; }
+.spec-txt .character-color span:nth-child(4){ background-color: #f9fa01; }
+.spec-txt{width: 30vw; display: flex; flex-flow: column;  gap:0.6vw;}
+.spec-txt h3{ display: inline; font-size:1.2vw; font-weight: 500; text-transform: uppercase;}
+.spec-txt p{ display: inline; font-size:1.0vw; font-weight: 100;}
+
+/* object-fit: cover; */
+/* flex-flow: row nowrap;  */
+.slide-various-form{ display: flex; flex-flow: row wrap; justify-content: center; align-items: center; gap:1vw; width: 94vw;  height: 22vw; }
+button{ background: none; border: none; outline: none; z-index: 2;}
+button img{ opacity: .3;}
+.slide-various-frame{  height: 22vw; overflow: hidden; width: 85vw;}
+.slide-various-frame ul{ width:172vw ;}
+.slide-various-frame ul li{ float: left; overflow: hidden; 
+    margin-right: 1vw; width: 20.5vw; height: 22vw; border-radius: 6px;
+    background-color: rgb(218, 238, 130); border: 1px solid #7775;}
+
+
+
+
+
+
+
+
+
+/* 
+
+.footer{  display: flex; gap: 3vw; justify-content: center; align-items: center; width: 100%; height: 134px; background-color: #222;}
+.flogo img{ padding: 0.1vw;  opacity: .3; height: 4vw; filter: invert(.6);}
+
+.fside {color: #888; flex-grow: 1;}
+.fside p{ line-height: 1.6vw;}
+.fcall-btn{display: none; width: 90vw; display: flex; flex-flow: column wrap;
+    gap: 3vw; justify-content: center; align-items: center; color: #777;}
+.fcall-btn p:not(:last-child){ width: 75vw; height:  48px;
+    display: flex; flex-flow: column wrap; justify-content: center;align-items: center;
+    background-color: #555; border-radius: 10px; color: #999;}
+    .fcall-btn p:not(:last-child):hover{ background-color: #f32e9799;color: #ddd; }
+
+.fsns { padding: 2vw;  display: flex; gap: 1.4vw; justify-content: center; align-items: center; }
+.fsns i{ opacity: .4;}
+.fsns i:hover{ opacity: .8;}
+
+
+ */
