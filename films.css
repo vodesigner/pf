@@ -1,0 +1,43 @@
+/* main{ padding-top: 4vw; background-color: aquamarine;}    */
+#films-main{ padding-top: 4vw;  position: relative; overflow: hidden;
+display: flex; flex-flow: column nowrap;  justify-content: center; align-items: center;
+padding-bottom: 10vw;}
+
+.title-underline { width: 960px; height: 5vw; display: flex ; flex-flow: row wrap; }
+.title-underline h1 { font-size: 3vw; flex-grow: 2;  }
+.title-underline div{ display: inline; width: 16vw; height: 3vw ; 
+    border-radius: 10px; background-color: #ea3b76; font-size: 1.0vw; color: #f5f5f5;
+    display: flex ;justify-content: center; align-items: center; }
+.title-underline hr { border-top: 1px solid #77777711; z-index: 6; height: 1px;  width: 80vw; box-sizing: border-box;}
+.title-underline div:hover{background-color: #555; font-size: 1.1vw; font-weight: 600; color: #ea3b76; }
+/* 
+.title-underline .title-side-btn{ display: inline; width: 16vw; height: 3vw ; 
+    border-radius: 10px; background-color: #ea3b76; font-size: 1.0vw; color: #f5f5f5;
+    display: flex ;justify-content: center; align-items: center; }
+.title-underline .title-side-btn:hover{background-color: #555; font-size: 1.0vw; color: #ea3b76;}
+ */
+
+ hr { border-top: 2px solid #77777711; z-index: 6; height: 1px;  width: 80vw;}
+
+  #films-main>hr { border-top: 2px solid #77777711; z-index: 6; height: 1px;  width: 80vw; margin-bottom: 7vw;}
+
+ .films-rel{ width: 960px; height: 540px;}
+.films-rel video{ width: 960px; height: 540px;}
+.films-spec { margin-top: 3vw; display: flex ; flex-flow: row wrap; width: 960px;  height: 360px;
+    gap: 15px; padding: 2vw 20px 6vw 20px; border-radius: 12px; background-color: #77777706; }
+.films-spec div { width: 290px;}
+/* 
+.films-spec div>a{ width: 180px; height: 48px; background-color: #ea3b76;}
+.films-spec div>a>p{color: #f5f5f5;}
+  */
+.films-spec div h2 { width: 290px; height: 2vw; font-size: 1.3vw; font-weight: 400; }
+.films-spec div p {  width: 290px; height: 5vw; font-size: 1.0vw; font-weight: 100;}
+.films-spec div:last-child p {  width: 180px; height: 48px; 
+    background-color: #ea3b76; color: #f5f5f5; font-size: 1.0vw; font-weight: 100
+    ;border-radius: 10px; display: flex; justify-content: center; align-items: center;}
+    .films-spec div:last-child p:hover{ 
+        background-color: #555 ; color: #ea3b76; font-size: 1.1vw; font-weight: 600;}
+       
+
+
+
