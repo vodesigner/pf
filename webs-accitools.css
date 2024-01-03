@@ -37,6 +37,11 @@ background-color: #7770;}
 .webs-window-txt button{ width: 400px; height: 72px; font-size: 1.0vw;
 background-color: #aaa; color: #ccc; border-radius: 6px; }
 
+.webs-window-txt h4{ font-size: 1.4vw; color: #f5f5f5; width: 400px; height: 72px;
+    background-color: #da2d64; border-radius: 10px;
+    display: flex; justify-content: center; align-items: center;}
+.webs-window-txt h4:hover{ font-size: 1.6vw; font-weight: 600; 
+    color: #ccc;   background-color: #333;}
 
 
 /* 카테고리 */
