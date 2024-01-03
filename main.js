@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let caIntervalId;
 
   // 슬라이드의 너비와 개수를 이용하여 전체 길이 계산
-  const caSlideWidth = caSlides[0].offsetWidth + parseFloat(getComputedStyle(caSlides[0]).marginRight);
+  const caSlideWidth = caSlides[0].offsetWidth + parseFloat(getComputedStyle(caSlides[0]).marginRight)-0.5;
   const caTotalSlides = caSlides.length;
   const caTotalWidth = caSlideWidth * caTotalSlides;
 
