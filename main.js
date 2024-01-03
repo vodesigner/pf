@@ -57,5 +57,121 @@ tabMenu.click(function (e) {
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const prevBtn = document.querySelector(".webs-detail-plan-win .prev");
+  const nextBtn = document.querySelector(".webs-detail-plan-win .next");
+  const slideWrap = document.querySelector(".webs-detail-plan-wrap");
+  // const nowSlideLength = document.querySelector(".webs-detail-plan-wrap");
+  let currentIndex = 0;
+  let intervalId;
 
 
+      // 추가된 부분: 슬라이드의 너비와 개수를 이용하여 전체 길이 계산
+      const slides = document.querySelectorAll(".webs-detail-plan-wrap > li");
+      const slideWidth = slides[0].offsetWidth;
+      const totalSlides = slides.length;
+      const totalWidth = slideWidth * totalSlides;
+
+      function updateSlide() {
+        const newTransformValue = -currentIndex * slideWidth + "px";
+        slideWrap.style.transform = "translateX(" + newTransformValue + ")";
+      }
+
+      function startInterval() {
+        intervalId = setInterval(function () {
+          if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          updateSlide();
+        }, 4000); // 4초마다 자동 전환
+      }
+
+      function stopInterval() {
+        clearInterval(intervalId);
+      }
+
+      nextBtn.addEventListener("click", function () {
+        stopInterval();
+        if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlide();
+        startInterval();
+      });
+
+      prevBtn.addEventListener("click", function () {
+        stopInterval();
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = totalSlides - 1;
+        }
+        updateSlide();
+        startInterval();
+      });
+
+      // 마우스 이벤트 처리
+      const sliderContainer = document.querySelector(".webs-detail-plan-win");
+
+      sliderContainer.addEventListener("mouseenter", function () {
+        stopInterval();
+      });
+
+      sliderContainer.addEventListener("mouseleave", function () {
+        startInterval();
+      });
+
+      // 초기 시작
+      startInterval();
+    });
+
+
+
+/*
+    nextBtn.addEventListener("click", function () {
+      clearInterval(intervalId);
+      if (currentIndex < 3) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      updateSlide();
+      startInterval();
+    });
+
+    prevBtn.addEventListener("click", function () {
+      clearInterval(intervalId);
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = 3;
+      }
+      updateSlide();
+      startInterval();
+    });
+
+    function updateSlide() {
+      // slideWrap.style.width = ;
+      const newTransformValue = -currentIndex * 1280 + "px";
+      slideWrap.style.transform = "translateX(" + newTransformValue + ")";
+    }
+
+    function startInterval() {
+      intervalId = setInterval(function () {
+        if (currentIndex < 3) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlide();
+      }, 4000); // 4초마다 자동 전환
+    }
+
+    // 초기 시작
+    startInterval();
+  });
+  */
