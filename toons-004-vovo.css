@@ -36,40 +36,72 @@ button img{ opacity: .3;}
 
 
 
+
+.webs-detail>h2{font-size: 3vw; text-transform: uppercase;}
+.webs-detail{ display: flex; gap: 2vw; flex-flow: column nowrap;
+    align-items: center; height: 2800px; width:  100vw ; overflow: hidden; }
+.webs-detail-plan{}
+
+
+.webs-detail-full{display: flex; gap: 2vw; flex-flow: column nowrap;
+    justify-content: center; align-items: center;}
+.webs-detail-full-img{ border: 1px solid #7773; width: 1000px; height: 800px;
+background-image: url(images/004-vovo/004-vovo-back-01.png); 
+background-size: cover;}
+.webs-detail-full-img:hover{
+    background-image: url(images/004-vovo/004-vovo-back-02-bump.png); }
+.webs-detail-full-img img{ width: 100%;}
+.webs-detail-full-image{ border: 1px solid #7773; width: 900px; height: 900px;}
+.webs-detail-full-image img{width:  100%; margin: 0 auto;}
+.webs-detail-full h2{ text-align: center; margin: 24px 0 0 0; font-size: 1.4vw; text-transform: uppercase;}
+
+
+
+
+
+
+
+
+
+
+
+
 .toons-skills{width: 60vw; height: 100vw;  padding-top: 4vw;
     display: flex; flex-flow: column nowrap; gap:2vw; justify-content: center; }
 
-.toons-snapshots{ padding-top: 5vw; display: flex; flex-flow: row wrap; width: 100vw; height: 53vw;;overflow: hidden; }
+.toons-snapshots{ padding-top: 5vw; display: flex; flex-flow: row wrap; width: 100vw; height: 33vw;;overflow: hidden; }
 .toons-snapshots h2{ font-size: 4vw; text-align: center; margin-bottom: 8vw; margin-bottom: 4vw;flex-grow: 1; text-align: center; width: 88vw;}
 
 .toons-snapshots div{ width: 20vw; height: 20vw; overflow: hidden; box-sizing: border-box;
     border: 2px solid #555;   }
-.toons-snapshots div img{ filter: invert(100); }
-.toons-snapshots div img:hover{ filter: invert(0); }
+.toons-snapshots div img{ filter: invert(0); width: 130%; }
+.toons-snapshots div img:hover{ filter: invert(100); }
 
 
 
 
 
 
-.footer{  display: flex; gap: 3vw; justify-content: center; align-items: center; width: 100%; height: 134px; 
+
+.footer{  display: flex; gap: 3vw; justify-content: center; align-items: center; 
+    width: 100%; height: 134px; 
     background-color: #222; flex-flow: row nowrap;}
 .flogo img{ padding: 0.1vw;  opacity: .3; height: 4vw; filter: invert(.6);}
 
-.fside {color: #888; flex-grow: 1;}
+.fside {color: #888; flex-grow: 0; width: 60vw;}
 .fside p{ line-height: 1.2vw;}
 
-.fcall-btn{ display: none; width: 20vw; display: flex; flex-flow: column wrap;
+.fcall-btn{ display: none; width: 20vw;flex-flow: column wrap;
     gap: 3vw; justify-content: center; align-items: center; color: #777;}
-.fcall-btn p { display: none;}
-.fcall-btn p:not(:last-child){ width: 80vw; height:  48px;
-    display: flex; flex-flow: column wrap; justify-content: center;align-items: center;
+.fcall-btn>p, .fcall-btn>a>p { display: none;}
+.fcall-btn p:not(:last-child){  display: none; width: 80vw; height:  48px;
+    flex-flow: column wrap; justify-content: center;align-items: center;
     background-color: #555; border-radius: 10px; color: #999;}
-.fcall-btn p:not(:last-child):hover{ background-color: #f32e9799;color: #ddd; }
-
-.fsns { padding: 2vw;  display: flex; gap: 1.0vw; 
-    justify-content: center; align-items: center; }
-.fsns i{ opacity: .4;}
+.fcall-btn p:not(:last-child):hover{ display: none; background-color: #f32e9799;color: #ddd; }
+.fcall-btn-COPYRIGHT{ display: none;}
+.fsns { padding: 2vw;  display: flex; gap: 1.0vw;  width: 12vw; height: 134px; z-index: 55;
+    justify-content: center; align-items: center;  flex-grow: 1; }
+.fsns i{ opacity: .4;  }
 .fsns i:hover{ opacity: .8;}
 
 
