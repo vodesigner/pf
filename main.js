@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
             currentIndex = 0;
           }
           updateSlide();
-        }, 4000); // 4초마다 자동 전환
+        }, 6000); // 6초마다 자동 전환
       }
 
       function stopInterval() {
