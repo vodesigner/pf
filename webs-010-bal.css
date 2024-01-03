@@ -46,7 +46,7 @@ background-color: #aaa; color: #ccc; border-radius: 6px; }
 /* .webs-category{height: 120vw;} */
 .slide-category-form { width: 100vw; overflow: hidden;}
 .slide-form { height:  560px; }
-
+.slide-category-wrap{ transition: 0.5s;}
 
 
 .webs-detail>h2{font-size: 3vw; text-transform: uppercase;}
