@@ -61,7 +61,7 @@ display:  flex; justify-content: center; }
 .toons-snapshots div img:hover{ filter: invert(0); }
 
 .slide-category-form{ padding: 3vw 0; height: 28vw; overflow: hidden;}
-.slide-category-wrap li{ border: 1px solid #77777777; border-radius: 20px;}
+.slide-category-wrap li{ border: 1px solid #77777777; border-radius: 20px; box-sizing: border-box;}
 .slide-category-frame ul{ width:172vw ; overflow: hidden;}
 
 .category-same-img{overflow: hidden; height: 13vw; display: flex; justify-content: center;}
@@ -71,3 +71,12 @@ display:  flex; justify-content: center; }
 .category-same-txt p{ padding-top: 6px; font-size: 1.2vw;}
 
 
+
+/* 카테고리 */
+
+.webs-category{width: 100vw; height: 560px; overflow: hidden;
+    display: flex; gap: 2vw; flex-flow: row wrap; justify-content: center; }
+/* .webs-category{height: 120vw;} */
+.slide-category-form { width: 100vw; overflow: hidden;}
+.slide-form { height:  560px; }
+.slide-category-wrap{ transition: 0.5s;}
