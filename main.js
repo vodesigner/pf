@@ -47,15 +47,15 @@ tabMenu.click(function (e) {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const caPrevBtn = document.querySelector(".slide-category-form .ca-prev");
-  const caNextBtn = document.querySelector(".slide-category-form .ca-next");
-  const caSlideWrap = document.querySelector(".slide-category-wrap");
-  const caSlides = document.querySelectorAll(".slide-category-wrap > li");
+  const caPrevBtn = document.querySelector(".slide-form .ca-prev");
+  const caNextBtn = document.querySelector(".slide-form .ca-next");
+  const caSlideWrap = document.querySelector(".slide-wrap");
+  const caSlides = document.querySelectorAll(".slide-wrap > li");
   let caCurrentIndex = 0;
   let caIntervalId;
 
   // 슬라이드의 너비와 개수를 이용하여 전체 길이 계산
-  const caSlideWidth = caSlides[0].offsetWidth + parseFloat(getComputedStyle(caSlides[0]).marginRight)-1;
+  const caSlideWidth = caSlides[0].offsetWidth + parseFloat(getComputedStyle(caSlides[0]).marginRight);
   const caTotalSlides = caSlides.length;
   const caTotalWidth = caSlideWidth * caTotalSlides;
 
@@ -70,6 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
       caCurrentIndex++;
       caSlides[caCurrentIndex].style.display = "block";
       updateCaSlide();
+    } else {
+      // 마지막 슬라이드일 경우 처음으로 돌아가기
+      caSlides[caCurrentIndex].style.display = "block";
+      caCurrentIndex = 0;
+      caSlides[caCurrentIndex].style.display = "block";
+      updateCaSlide();
     }
   }
 
@@ -79,8 +85,15 @@ document.addEventListener("DOMContentLoaded", function () {
       caCurrentIndex--;
       caSlides[caCurrentIndex].style.display = "block";
       updateCaSlide();
+    } else {
+      // 첫 번째 슬라이드일 경우 마지막으로 이동
+      caSlides[caCurrentIndex].style.display = "block";
+      caCurrentIndex = caTotalSlides - 4;
+      caSlides[caCurrentIndex].style.display = "block";
+      updateCaSlide();
     }
   }
+
 
   function startInterval() {
     caIntervalId = setInterval(function () {
@@ -96,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   startInterval();
 
   // 마우스 이벤트 처리
-  const sliderContainer = document.querySelector(".slide-category-form");
+  const sliderContainer = document.querySelector(".slide-form");
 
   sliderContainer.addEventListener("mouseenter", function () {
     stopInterval();
@@ -117,122 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-  /*
-  const caSlideWrap = document.querySelector(".slide-category-wrap");
-  const caSlides = document.querySelectorAll(".slide-category-wrap > li");
-  let caCurrentIndex = 0;
-  let caIntervalId;
-
-  // 슬라이드의 너비와 개수를 이용하여 전체 길이 계산
-  const caSlideWidth = caSlides[0].offsetWidth + parseFloat(getComputedStyle(caSlides[0]).marginRight);
-  const caTotalSlides = caSlides.length;
-  const caTotalWidth = caSlideWidth * caTotalSlides;
-
-  function updateCaSlide() {
-    const newTransformValue = -caCurrentIndex * caSlideWidth + "px";
-    caSlideWrap.style.transform = "translateX(" + newTransformValue + ")";
-  }
-
-  function moveNext() {
-    caSlides[caCurrentIndex].style.display = "none";
-    caCurrentIndex = (caCurrentIndex + 1) % caTotalSlides;
-    caSlides[caCurrentIndex].style.display = "block";
-    updateCaSlide();
-  }
-
-  function movePrev() {
-    caSlides[caCurrentIndex].style.display = "none";
-    caCurrentIndex = (caCurrentIndex - 1 + caTotalSlides) % caTotalSlides;
-    caSlides[caCurrentIndex].style.display = "block";
-    updateCaSlide();
-  }
-
-  function startInterval() {
-    caIntervalId = setInterval(function () {
-      moveNext();
-    }, 5000); // 5초마다 자동 전환
-  }
-
-  function stopInterval() {
-    clearInterval(caIntervalId);
-  }
-
-  // 초기 시작
-  startInterval();
-
-  // 마우스 이벤트 처리
-  const sliderContainer = document.querySelector(".slide-category-form");
-
-  sliderContainer.addEventListener("mouseenter", function () {
-    stopInterval();
-  });
-
-  sliderContainer.addEventListener("mouseleave", function () {
-    startInterval();
-  });
-});
-
-*/
-
-
-
-
-  /*
-  const caSlideWrap = document.querySelector(".slide-category-wrap");
-  const caSlides = document.querySelectorAll(".slide-category-wrap > li");
-  let caCurrentIndex = 0;
-  let caIntervalId;
-
-  // 슬라이드의 너비와 개수를 이용하여 전체 길이 계산
-  const caSlideWidth = caSlides[0].offsetWidth;
-  const caTotalSlides = caSlides.length;
-  const caTotalWidth = caSlideWidth * caTotalSlides;
-
-  function updateCaSlide() {
-    const newTransformValue = -caCurrentIndex * caSlideWidth + "px";
-    caSlideWrap.style.transform = "translateX(" + newTransformValue + ")";
-  }
-
-  function moveNext() {
-    caSlides[caCurrentIndex].style.display = "none";
-    caCurrentIndex = (caCurrentIndex + 1) % caTotalSlides;
-    caSlides[caCurrentIndex].style.display = "block";
-    updateCaSlide();
-  }
-
-  function movePrev() {
-    caSlides[caCurrentIndex].style.display = "none";
-    caCurrentIndex = (caCurrentIndex - 1 + caTotalSlides) % caTotalSlides;
-    caSlides[caCurrentIndex].style.display = "block";
-    updateCaSlide();
-  }
-
-  function startInterval() {
-    caIntervalId = setInterval(function () {
-      moveNext();
-    }, 5000); // 5초마다 자동 전환
-  }
-
-  function stopInterval() {
-    clearInterval(caIntervalId);
-  }
-
-  // 초기 시작
-  startInterval();
-
-  // 마우스 이벤트 처리
-  const sliderContainer = document.querySelector(".slide-category-form");
-
-  sliderContainer.addEventListener("mouseenter", function () {
-    stopInterval();
-  });
-
-  sliderContainer.addEventListener("mouseleave", function () {
-    startInterval();
-  });
-});
-
-*/
 
 
 
