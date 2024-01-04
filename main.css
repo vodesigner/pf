@@ -7,7 +7,7 @@ html, body{
 /* #body-wrap{ height: 100%;} */
 
 body{  width: 100vw; overflow-x: hidden;}
-/* #header{ position: relative;} */
+#header{ width: 100vw; overflow-x: hidden;}
 #notice-roof {position: absolute; left: 0; top:20px; z-index: 88;
     width: 280px; height: 180px; overflow: hidden; 
     display: flex; align-items: center; justify-content: center;
@@ -40,7 +40,7 @@ body{  width: 100vw; overflow-x: hidden;}
 }
 
 #notice-roof p { color: #f5f5f5;  padding: 20px;
-   border-radius: 20px;  
+   border-radius: 20px;  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     line-height: 28px; background-color: #e51e74;
     font-size: 18px; font-weight: 600; text-align: center;  }
 
