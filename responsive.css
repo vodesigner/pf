@@ -131,7 +131,7 @@
   #navi ul.menu li{  font-size: 1.6vw; padding: 8px 17px;  }
 
     #navi {gap: 4.8vw; height: 7vw; position: static;}
-    .logo { width: 18vw; }
+    .logo { width: 1vw; }
     .logo img{ margin: 1vw 1.4vw; opacity: 0.6;}
 
     .sitemap-close-btn{ display: none;}
@@ -161,12 +161,13 @@
     .fside p{ line-height: 2.0vw;}
 }
 @media  ( max-width: 1024px ) {
-    #navi { gap: 4.8vw; height: 10vw; position: fixed; z-index: 10; background-color: #f2f2f2;}
+    #navi { 
+       height: 10vw; position: fixed; z-index: 10; background-color: #f2f2f2;}
     main{ padding-top: 11vw;}
     .hamberger{ right: 2vw;}
     #navi ul.menu{ display:  none;}
     .logo img{height: 6vw;}
-    .logo {padding-left: 0;justify-content: center;  text-align: center;  width: 17vw;}
+    .logo {padding-left: 0;justify-content: center;  text-align: center;  width: 1vw;}
    
    .empty { height: 40vw;}
     .sitemap-in{ flex-flow: row wrap; top: 10vw; justify-content: center; 
@@ -194,12 +195,17 @@
    
     .fside p{ line-height: 2.2vw;}
     .fcall-btn{display: none;}
+
+    
+body{  width: 100vw; overflow-x: hidden;}
+#header{ width: 100vw; overflow-x: hidden;}
   }
 
 @media ( max-width: 960px ) {
   /* @media  all and (min-width:769px) and  ( max-width: 960px ) { */
   
   #navi {  height: 12vw;position: fixed; z-index: 10; background-color: #f2f2f2;}
+  .logo{ width: 0.1vw;}
   main { padding-top: 12vw;}
   main video{ width: 500%;}
   .empty { height: 40vw;}
@@ -237,6 +243,10 @@
 .item-inner table { width: 48vw; margin-top: 1.0vw;}
 .fside p{ line-height: 2.4vw;}
 .fcall-btn{display: none;}
+
+
+body{  width: 100vw; overflow-x: hidden;}
+#header{ width: 100vw; overflow-x: hidden;}
 }
 
 
@@ -252,7 +262,7 @@
 }
   */
 
-@media ( max-width: 768px ) {
+@media (min-width:675px) and  ( max-width: 768px ) {
   main>div{ width: 48.4vw; height: 27.225vw;  overflow: hidden;  }
   .empty { height: 40vw;}
   .item-in h5{font-size: 2.2vw; margin: 4vw 0 26px 0; }
@@ -260,6 +270,10 @@
   .item-in h6{font-size: 2.4vw; margin: 1.2vw 0 8px 0;  padding-top: 0.3vw;}
   .fside p{ line-height: 2.8vw;}
   .fcall-btn{display: none;}
+
+  
+body{  width: 100vw; overflow-x: hidden;}
+#header{ max-width: 768px; overflow-x: hidden;}
 }
 
 @media  (min-width:563px) and  ( max-width: 674px ) {
@@ -271,6 +285,10 @@
   .fside p{ line-height: 3.0vw;}
   .fcall-btn{display: none;}
     
+
+  
+body{  width: 100vw; overflow-x: hidden;}
+#header{ max-width: 674px; overflow-x: hidden;}
   }
 
  
@@ -280,9 +298,9 @@
 @media  ( max-width: 562px ) {
   /* @media  all and (min-width:431px) and  ( max-width: 562px ) { */
   
-  #navi { gap: 4.8vw; height: 23vw; position: fixed; z-index: 10; background-color: #f2f2f2;}
+  #navi { gap: 0vw; height: 23vw; position: fixed; z-index: 10; background-color: #f2f2f2;}
   #navi ul.menu{display: none;}
-  .logo {width: 57vw; justify-content: center;}
+  .logo { justify-content: center;}
   .logo img{height: 12vw; margin: 1vw 0; opacity: 0.6;}
 
   main{padding-top:  23vw;}
@@ -298,6 +316,8 @@
   .sitemap_item ul li a{
       font-size: 5.0vw; font-weight: 100; 
       line-height: 7vw; color: #777;
+
+      
   }
   
   .sitemap_item ul li a:hover{  font-weight: 400;font-size: 5.1vw; color: #555; }
@@ -340,21 +360,29 @@ padding: 2.2vw; border-radius: 50%;}
  .fcall-btn{display: flex; order: 3;}
  .fside {order: 3; display: none; }
 .fside p{ line-height: 4.5vw;}
+
+
+body{  width: 100vw; overflow-x: hidden;}
+#header{ max-width: 431px; overflow-x: hidden;}
+
 }
 
-/* 
+
 @media (min-width:376px) and  ( max-width: 430px ) {
-  main { flex-flow: column nowrap;}
-  /* main>div{ width: 100vw; height: 55.6875vw;  overflow: hidden;  } 
+  /* main { flex-flow: column nowrap;}*/
+  /* main>div{ width: 100vw; height: 55.6875vw;  overflow: hidden;  } */
+  
+#header{ max-width: 376px; overflow-x: hidden;}
   
 } 
 
 
 @media (min-width:361px) and  ( max-width: 375px ) {
   
+#header{ max-width: 361px; overflow-x: hidden;}
 }
 
 @media (max-width: 360px ) {
   
+#header{ max-width: 360px; overflow-x: hidden;}
 } 
-*/
